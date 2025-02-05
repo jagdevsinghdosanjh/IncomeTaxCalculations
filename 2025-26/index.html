@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>By Jagdev Singh Dosanjh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Income Tax Calculator</h1>
+        <form id="incomeForm">
+            <label for="basicPay">Basic Pay:</label>
+            <input type="number" id="basicPay" required>
+            
+            <label for="da">Dearness Allowance (%):</label>
+            <input type="number" id="da" required>
+            
+            <label for="hra">House Rent Allowance (%):</label>
+            <input type="number" id="hra" required>
+            
+            <label for="raa">Rural Area Allowance (%):</label>
+            <input type="number" id="raa" required>
+            
+            <label for="mba">Fixed Mobile Allowance:</label>
+            <input type="number" id="mba" required>
+            
+            <label for="meda">Fixed Medical Allowance:</label>
+            <input type="number" id="meda" required>
+            
+            <label for="ga">Fixed Grade Pay:</label>
+            <input type="number" id="ga" required>
+
+            <label for="sda">Standard Deduction Allowed:</label>
+            <input type="number" id="sda" required>
+            
+            <button type="button" onclick="calculateIncome()">Calculate</button>
+        </form>
+        
+        <div id="results">
+            <h2>Salary Details</h2><hr>
+            <p id="basicPayScale"></p>
+            <p id="gradePay"></p>
+            <p id="dearness_a"></p>
+            <p id="house_r"></p>
+            <p id="rural_a"></p>
+            <p id="mobile_Allowance"></p>
+            <p id="medical_Allowance"></p>
+            <p id="totalMPay"></p>
+            <hr>
+
+            <h2>Tax-Results</h2>
+            <p id="monthlyIncome"></p>
+            <p id="annualIncome"></p>
+            <p id="monthlyTax"></p>
+            <p id="annualTax"></p>
+            <p id="eduCess"></p>
+            <p id="netTax"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
