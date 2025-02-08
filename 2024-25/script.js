@@ -25,18 +25,15 @@ function calculateIncome() {
     
     let annualTax = 0;
 
-    if (taxableIncome > 2400000) {
-        annualTax = (taxableIncome - 2400000) * 0.30 + (400000 * 0.25) + (400000 * 0.20) + (400000 * 0.15) + (400000 * 0.10) + (400000 * 0.05);
-    } else if (taxableIncome > 2000000) {
-        annualTax = (taxableIncome - 2000000) * 0.25 + (400000 * 0.20) + (400000 * 0.15) + (400000 * 0.10) + (400000 * 0.05);
-    } else if (taxableIncome > 1600000) {
-        annualTax = (taxableIncome - 1600000) * 0.20 + (400000 * 0.15) + (400000 * 0.10) + (400000 * 0.05);
-    } else if (taxableIncome > 1200000) {
-        annualTax = (taxableIncome - 1200000) * 0.15 + (400000 * 0.10) + (400000 * 0.05);
-    } else if (taxableIncome > 800000) {
-        annualTax = (taxableIncome - 800000) * 0.10 + (400000 * 0.05);
-    } else if (taxableIncome > 400000) {
-        annualTax = (taxableIncome - 400000) * 0.05;
+    if (taxableIncome > 1000000) {
+        annualTax = (taxableIncome - 1000000) * 0.30 + (500000 * 0.20) + (250000 * 0.05);
+    } else if (taxableIncome > 500000) {
+        annualTax = (taxableIncome - 500000) * 0.20 + (250000 * 0.05);
+    } else if (taxableIncome > 250000) {
+        annualTax = (taxableIncome - 250000) * 0.05;
+    }
+    else if(taxableIncome<250000){
+        annualTax=(taxableIncome)*0.0;
     }
 
     const monthlyTax = annualTax / 12;
